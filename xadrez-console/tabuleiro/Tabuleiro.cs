@@ -35,6 +35,19 @@ namespace tabuleiro
             _pecas[pos.linha,pos.coluna] = p;
             p.posicao = pos;
         }
+
+        public Peca RetirarPeca(Posicao pos)
+        {
+            if(Peca(pos) == null)
+            {
+                return null;
+            }
+            Peca aux = Peca(pos);
+            aux.posicao = null;
+            _pecas[pos.linha, pos.coluna] = null;
+            return aux;
+
+        }
         public bool ExistePeca(Posicao pos)
         {
             validarPosicao(pos);
