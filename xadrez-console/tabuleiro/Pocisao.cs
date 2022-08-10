@@ -11,7 +11,7 @@ namespace tabuleiro
         public int coluna { get; set; }
         public int linha { get; set; }
 
-        public Pocisao(int coluna, int linha)
+        public Pocisao(int linha, int coluna)
         {
             this.coluna = coluna;
             this.linha = linha;
